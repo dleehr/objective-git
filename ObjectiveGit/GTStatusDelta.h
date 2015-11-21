@@ -24,6 +24,8 @@ typedef NS_ENUM(NSInteger, GTStatusDeltaStatus) {
 	GTStatusDeltaStatusIgnored = GIT_DELTA_IGNORED,
 	GTStatusDeltaStatusUntracked = GIT_DELTA_UNTRACKED,
 	GTStatusDeltaStatusTypeChange = GIT_DELTA_TYPECHANGE,
+	GTStatusDeltaStatusUnreadable = GIT_DELTA_UNREADABLE,
+	GTStatusDeltaStatusConflicted = GIT_DELTA_CONFLICTED,
 };
 
 NS_ASSUME_NONNULL_BEGIN

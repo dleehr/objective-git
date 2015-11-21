@@ -88,6 +88,11 @@ NSString *const GTRepositoryStatusOptionsPathSpecArrayKey = @"GTRepositoryStatus
 			clean = NO;
 			*stop = YES;
 		}
+
+		if (indexToWorkDirStatus == GTStatusDeltaStatusConflicted || headToIndexStatus == GTStatusDeltaStatusConflicted) {
+			clean = NO;
+			*stop = YES;
+		}
 	}];
 	
 	return clean;
