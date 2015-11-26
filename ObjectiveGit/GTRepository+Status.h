@@ -32,6 +32,7 @@ typedef NS_OPTIONS(NSInteger, GTFileStatusFlags) {
 	GTFileStatusRenamedInWorktree     = GIT_STATUS_WT_RENAMED,
 
 	GTFileStatusIgnored = GIT_STATUS_IGNORED,
+	GTFileStatusConflicted = GIT_STATUS_CONFLICTED,
 };
 
 /// An `NSNumber` wrapped `GTRepositoryStatusOptionsShow` bitmask.
