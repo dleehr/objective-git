@@ -60,23 +60,32 @@
 
 - (NSString *)name {
 	const char *cName = git_submodule_name(self.git_submodule);
-	if (cName == NULL) return nil;
+	NSAssert(cName != NULL, @"Unexpected nil submodule name");
 
-	return @(cName);
+	NSString *name = @(cName);
+	NSAssert(name, @"name is nil");
+
+	return name;
 }
 
 - (NSString *)path {
 	const char *cPath = git_submodule_path(self.git_submodule);
-	if (cPath == NULL) return nil;
+	NSAssert(cPath != NULL, @"Unexpected nil submodule path");
 
-	return @(cPath);
+	NSString *path = @(cPath);
+	NSAssert(path, @"message is nil");
+
+	return path;
 }
 
 - (NSString *)URLString {
 	const char *cURL = git_submodule_url(self.git_submodule);
-	if (cURL == NULL) return nil;
+	NSAssert(cURL != NULL, @"Unexpected nil submodule URL");
 
-	return @(cURL);
+	NSString *URL = @(cURL);
+	NSAssert(URL, @"URL is nil");
+
+	return URL;
 }
 
 #pragma mark Lifecycle
@@ -144,7 +153,7 @@
 	return YES;
 }
 
-- (nullable GTRepository *)submoduleRepository:(NSError **)error {
+- (GTRepository *)submoduleRepository:(NSError **)error {
 	git_repository *repo;
 	int gitError = git_submodule_open(&repo, self.git_submodule);
 	if (gitError != GIT_OK) {

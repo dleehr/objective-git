@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
-#import <Nimble/Nimble.h>
-#import <ObjectiveGit/ObjectiveGit.h>
-#import <Quick/Quick.h>
+@import ObjectiveGit;
+@import Nimble;
+@import Quick;
 
 #import "QuickSpec+GTFixtures.h"
 
@@ -34,6 +34,13 @@ describe(@"libgit", ^{
 		expect(@(git_features & GIT_FEATURE_SSH)).to(beTruthy());
 	});
 
+	it(@"should have ssh memory credentials", ^{
+		NSError *error;
+		GTCredential *cred = [GTCredential credentialWithUserName:@"null" publicKeyString:@"pub" privateKeyString:@"priv" passphrase:@"pass" error:&error];
+
+		expect(cred).notTo(beNil());
+		expect(error).to(beNil());
+	});
 });
 
 QuickSpecEnd

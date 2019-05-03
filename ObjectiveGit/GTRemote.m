@@ -104,7 +104,7 @@ NSString * const GTRemoteRenameProblematicRefSpecs = @"GTRemoteRenameProblematic
 + (BOOL)isValidRemoteName:(NSString *)name {
 	NSParameterAssert(name != nil);
 
-	return git_remote_is_valid_name(name.UTF8String) == GIT_OK;
+	return (git_remote_is_valid_name(name.UTF8String) == 1 ? YES : NO);
 }
 
 #pragma mark Properties
@@ -198,6 +198,21 @@ NSString * const GTRemoteRenameProblematicRefSpecs = @"GTRemoteRenameProblematic
 	if (gitError != GIT_OK) {
 		if (error != NULL) {
 			*error = [NSError git_errorFor:gitError description:@"Failed to update remote URL string."];
+		}
+		return NO;
+	}
+	return YES;
+}
+
+- (BOOL)updatePushURLString:(NSString *)URLString error:(NSError **)error {
+	NSParameterAssert(URLString != nil);
+	
+	if ([self.pushURLString isEqualToString:URLString]) return YES;
+	
+	int gitError = git_remote_set_pushurl(self.repository.git_repository, self.name.UTF8String, URLString.UTF8String);
+	if (gitError != GIT_OK) {
+		if (error != NULL) {
+			*error = [NSError git_errorFor:gitError description:@"Failed to update remote push URL string."];
 		}
 		return NO;
 	}

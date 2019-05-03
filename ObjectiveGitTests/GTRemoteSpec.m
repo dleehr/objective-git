@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 GitHub, Inc. All rights reserved.
 //
 
-#import <Nimble/Nimble.h>
-#import <ObjectiveGit/ObjectiveGit.h>
-#import <Quick/Quick.h>
+@import ObjectiveGit;
+@import Nimble;
+@import Quick;
 
 #import "QuickSpec+GTFixtures.h"
 #import "GTUtilityFunctions.h"
@@ -61,6 +61,21 @@ describe(@"updating", ^{
 		expect(remote.URLString).to(equal(newURLString));
 	});
 
+	it(@"push URL string", ^{
+		expect(remote.pushURLString).to(beNil());
+		
+		NSString *newURLString = @"https://github.com/github/Test_App.git";
+		
+		__block NSError *error = nil;
+		expect(@([remote updatePushURLString:newURLString error:&error])).to(beTruthy());
+		expect(error).to(beNil());
+		
+		// Reload remote from disk to pick up the change
+		remote = configuration.remotes[0];
+		
+		expect(remote.pushURLString).to(equal(newURLString));
+	});
+
 	it(@"fetch refspecs", ^{
 		expect(remote.fetchRefspecs).to(equal(@[ fetchRefspec ]));
 
@@ -92,7 +107,7 @@ describe(@"network operations", ^{
 		fetchingRepoURL = [fixturesURL URLByAppendingPathComponent:@"fetchrepo"];
 
 		NSError *error = nil;
-		fetchingRepo = [GTRepository cloneFromURL:repositoryURL toWorkingDirectory:fetchingRepoURL options:nil error:&error transferProgressBlock:nil checkoutProgressBlock:nil];
+		fetchingRepo = [GTRepository cloneFromURL:repositoryURL toWorkingDirectory:fetchingRepoURL options:nil error:&error transferProgressBlock:nil];
 		expect(fetchingRepo).notTo(beNil());
 		expect(error).to(beNil());
 

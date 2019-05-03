@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 
-#import <Nimble/Nimble.h>
-#import <ObjectiveGit/ObjectiveGit.h>
-#import <Quick/Quick.h>
+@import ObjectiveGit;
+@import Nimble;
+@import Quick;
 
 #import "QuickSpec+GTFixtures.h"
 
@@ -25,7 +25,7 @@ describe(@"-resetPathspecs:toCommit:error:", ^{
 		countStagedFiles = ^{
 			__block NSUInteger count = 0;
 			[repository enumerateFileStatusWithOptions:nil error:NULL usingBlock:^(GTStatusDelta *headToIndex, GTStatusDelta *indexToWorkingDirectory, BOOL *stop) {
-				if (headToIndex.status != GTStatusDeltaStatusUnmodified) count++;
+				if (headToIndex.status != GTDeltaTypeUnmodified) count++;
 			}];
 
 			return count;

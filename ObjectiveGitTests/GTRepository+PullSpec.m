@@ -6,10 +6,9 @@
 //  Copyright (c) 2015 GitHub, Inc. All rights reserved.
 //
 
-#import <Nimble/Nimble.h>
-#import <Nimble/Nimble-Swift.h>
-#import <ObjectiveGit/ObjectiveGit.h>
-#import <Quick/Quick.h>
+@import ObjectiveGit;
+@import Nimble;
+@import Quick;
 
 #import "QuickSpec+GTFixtures.h"
 #import "GTUtilityFunctions.h"
@@ -40,7 +39,7 @@ describe(@"pull", ^{
 			// Make a bare clone to serve as the remote
 			remoteRepoURL = [notBareRepo.gitDirectoryURL.URLByDeletingLastPathComponent URLByAppendingPathComponent:@"bare_remote_repo.git"];
 			NSDictionary *options = @{ GTRepositoryCloneOptionsBare: @1 };
-			remoteRepo = [GTRepository cloneFromURL:notBareRepo.gitDirectoryURL toWorkingDirectory:remoteRepoURL options:options error:&error transferProgressBlock:NULL checkoutProgressBlock:NULL];
+			remoteRepo = [GTRepository cloneFromURL:notBareRepo.gitDirectoryURL toWorkingDirectory:remoteRepoURL options:options error:&error transferProgressBlock:NULL];
 			expect(error).to(beNil());
 			expect(remoteRepo).notTo(beNil());
 			expect(@(remoteRepo.isBare)).to(beTruthy()); // that's better
@@ -49,7 +48,7 @@ describe(@"pull", ^{
 			expect(localRepoURL).notTo(beNil());
 
 			// Local clone for testing pushes
-			localRepo = [GTRepository cloneFromURL:remoteRepoURL toWorkingDirectory:localRepoURL options:nil error:&error transferProgressBlock:NULL checkoutProgressBlock:NULL];
+			localRepo = [GTRepository cloneFromURL:remoteRepoURL toWorkingDirectory:localRepoURL options:nil error:&error transferProgressBlock:NULL];
 
 			expect(error).to(beNil());
 			expect(localRepo).notTo(beNil());
@@ -68,7 +67,6 @@ describe(@"pull", ^{
 			[NSFileManager.defaultManager removeItemAtURL:remoteRepoURL error:NULL];
 			[NSFileManager.defaultManager removeItemAtURL:localRepoURL error:NULL];
 			error = NULL;
-			[self tearDown];
 		});
 
 		context(@"when the local and remote branches are in sync", ^{
@@ -256,8 +254,14 @@ describe(@"pull", ^{
 			BOOL result = [localRepo pullBranch:masterBranch fromRemote:remote withOptions:nil error:&error progress:^(const git_transfer_progress *progress, BOOL *stop) {
 				transferProgressed = YES;
 			}];
+			NSString *fileContents = [NSString stringWithContentsOfURL:[localRepo.fileURL URLByAppendingPathComponent:@"test.txt"] encoding:NSUTF8StringEncoding error:nil];
 			expect(@(result)).to(beFalsy());
-			expect(error).toNot(beNil());
+			expect(error.domain).to(equal(@"GTGitErrorDomain"));
+			expect(error.userInfo[GTPullMergeConflictedFiles]).to(equal(@[@"test.txt"]));
+			expect(fileContents).notTo(equal(@"TestLocal"));
+			expect([localRepo mergeHeadEntriesWithError:nil]).to(equal(@[remoteCommit.OID]));
+			expect([localRepo preparedMessageWithError:nil]).to(beginWith(@"Merge commit"));
+			expect(error.localizedDescription).to(equal(@"Merge conflict"));
 			expect(@(transferProgressed)).to(beTruthy());
 		});
 

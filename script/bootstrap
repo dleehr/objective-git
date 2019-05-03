@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export SCRIPT_DIR=$(dirname "$0")
+export SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
 ##
 ## Configuration Variables
@@ -10,7 +10,7 @@ config ()
 {
     # A whitespace-separated list of executables that must be present and locatable.
     # These will each be installed through Homebrew if not found.
-    : ${REQUIRED_TOOLS="xctool cmake libssh2 libtool autoconf automake pkg-config"}
+    : ${REQUIRED_TOOLS="cmake libssh2 libtool autoconf automake pkg-config"}
 
     export REQUIRED_TOOLS
 }
@@ -71,6 +71,7 @@ check_deps ()
 
         if [ "$code" -eq "0" ]
         then
+            echo "*** $tool is available"
             continue
         elif [ "$code" -ne "1" ]
         then

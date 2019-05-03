@@ -22,6 +22,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// The number of lines represented in the hunk.
 @property (nonatomic, readonly) NSUInteger lineCount;
 
+/// The starting line number in the old file
+@property (nonatomic, readonly) NSUInteger oldStart;
+
+/// The number of lines in the old file
+@property (nonatomic, readonly) NSUInteger oldLines;
+
+/// The starting line number in the new file
+@property (nonatomic, readonly) NSUInteger newStart;
+
+/// The number of lines in the new file
+@property (nonatomic, readonly) NSUInteger newLines;
+
 - (instancetype)init NS_UNAVAILABLE;
 
 /// Designated initialiser.
@@ -33,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// hunkIndex - The hunk's index within the patch.
 ///
 /// Returns the initialized instance.
-- (nullable instancetype)initWithPatch:(GTDiffPatch *)patch hunkIndex:(NSUInteger)hunkIndex NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nullable)initWithPatch:(GTDiffPatch *)patch hunkIndex:(NSUInteger)hunkIndex NS_DESIGNATED_INITIALIZER;
 
 /// Perfoms the given block on each line in the hunk.
 ///

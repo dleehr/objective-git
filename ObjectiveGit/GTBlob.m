@@ -40,7 +40,7 @@
 @implementation GTBlob
 
 - (NSString *)description {
-  return [NSString stringWithFormat:@"<%@: %p> size: %zi, content: %@, data = %@", NSStringFromClass([self class]), self, [self size], [self content], [self data]];
+  return [NSString stringWithFormat:@"<%@: %p> size: %lli, content: %@, data = %@", NSStringFromClass([self class]), self, [self size], [self content], [self data]];
 }
 
 
@@ -63,7 +63,7 @@
 	NSParameterAssert(repository != nil);
 
 	git_object *obj;
-    int gitError = git_object_lookup(&obj, repository.git_repository, oid, (git_otype) GTObjectTypeBlob);
+    int gitError = git_object_lookup(&obj, repository.git_repository, oid, (git_object_t) GTObjectTypeBlob);
     if (gitError < GIT_OK) {
         if (error != NULL) {
             *error = [NSError git_errorFor:gitError description:@"Failed to lookup blob"];

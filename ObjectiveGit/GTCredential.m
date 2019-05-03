@@ -77,7 +77,7 @@ typedef GTCredential *(^GTCredentialProviderBlock)(GTCredentialType allowedTypes
 	git_cred *cred;
 	int gitError = git_cred_ssh_key_memory_new(&cred, userName.UTF8String, publicKeyString.UTF8String, privateKeyString.UTF8String, passphrase.UTF8String);
 	if (gitError != GIT_OK) {
-		if (error) *error = [NSError git_errorFor:gitError description:@"Failed to create credentials object" failureReason:@"There was an error creating a credential object for username %@ with the provided public/private key pair.\nPublic key: %@\nPrivate key: %@", userName, publicKeyString, privateKeyString];
+		if (error) *error = [NSError git_errorFor:gitError description:@"Failed to create credentials object" failureReason:@"There was an error creating a credential object for username %@ with the provided public/private key pair.\nPublic key: %@", userName, publicKeyString];
 		return nil;
 	}
 	
@@ -105,16 +105,16 @@ int GTCredentialAcquireCallback(git_cred **git_cred, const char *url, const char
 	GTCredentialProvider *provider = info->credProvider;
 
 	if (provider == nil) {
-		giterr_set_str(GIT_EUSER, "No GTCredentialProvider set, but authentication was requested.");
+		git_error_set_str(GIT_EUSER, "No GTCredentialProvider set, but authentication was requested.");
 		return GIT_ERROR;
 	}
 
-	NSString *URL = (url != NULL ? @(url) : nil);
+	NSString *URL = (url != NULL ? @(url) : @"");
 	NSString *userName = (username_from_url != NULL ? @(username_from_url) : nil);
 
 	GTCredential *cred = [provider credentialForType:(GTCredentialType)allowed_types URL:URL userName:userName];
 	if (cred == nil) {
-		giterr_set_str(GIT_EUSER, "GTCredentialProvider failed to provide credentials.");
+		git_error_set_str(GIT_EUSER, "GTCredentialProvider failed to provide credentials.");
 		return GIT_ERROR;
 	}
 

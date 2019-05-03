@@ -47,11 +47,15 @@
 #pragma mark API
 
 - (NSString *)message {
-	return @(git_tag_message(self.git_tag));
+	NSString *message = @(git_tag_message(self.git_tag));
+	NSAssert(message, @"message is nil");
+	return message;
 }
 
 - (NSString *)name {
-	return @(git_tag_name(self.git_tag));
+	NSString *name = @(git_tag_name(self.git_tag));
+	NSAssert(name, @"message is nil");
+	return name;
 }
 
 - (GTObject *)target {
@@ -82,6 +86,15 @@
 	}
 
 	return [[GTObject alloc] initWithObj:target inRepository:self.repository];
+}
+
+- (BOOL)delete:(NSError **)error {
+	int gitError = git_tag_delete(self.repository.git_repository, self.name.UTF8String);
+	if (gitError != GIT_OK) {
+		if (error) *error = [NSError git_errorFor:gitError description:@"Tag deletion failed"];
+		return NO;
+	}
+	return YES;
 }
 
 @end
