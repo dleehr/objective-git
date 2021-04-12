@@ -19,3 +19,6 @@
 [submodule "Carthage/Checkouts/ZipArchive"]
 	path = Carthage/Checkouts/ZipArchive
 	url = https://github.com/ZipArchive/ZipArchive.git
+[submodule "Carthage/Checkouts/OpenSSL"]
+	path = Carthage/Checkouts/OpenSSL
+	url = https://github.com/krzyzanowskim/OpenSSL.git
