@@ -44,8 +44,14 @@
 		3747FA1626251C7100B2FCA2 /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0226251C4800B2FCA2 /* Nimble.xcframework */; };
 		3747FA1726251C7100B2FCA2 /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0126251C4800B2FCA2 /* Quick.xcframework */; };
 		3747FA1826251C7100B2FCA2 /* ZipArchive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */; };
-		3747FA3326251EA100B2FCA2 /* libgit2 in Frameworks */ = {isa = PBXBuildFile; productRef = 3747FA3226251EA100B2FCA2 /* libgit2 */; };
-		3747FA3D26251EF800B2FCA2 /* libgit2 in Frameworks */ = {isa = PBXBuildFile; productRef = 3747FA3C26251EF800B2FCA2 /* libgit2 */; };
+		37C614122625361C007C04AD /* libssh2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C6140E2625361C007C04AD /* libssh2.xcframework */; };
+		37C614132625361C007C04AD /* libssh2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37C6140E2625361C007C04AD /* libssh2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37C614142625361C007C04AD /* libgit2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C6140F2625361C007C04AD /* libgit2.xcframework */; };
+		37C614152625361C007C04AD /* libgit2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37C6140F2625361C007C04AD /* libgit2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37C614162625361C007C04AD /* libcrypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C614102625361C007C04AD /* libcrypto.xcframework */; };
+		37C614172625361C007C04AD /* libcrypto.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37C614102625361C007C04AD /* libcrypto.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37C614182625361C007C04AD /* libssl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C614112625361C007C04AD /* libssl.xcframework */; };
+		37C614192625361C007C04AD /* libssl.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37C614112625361C007C04AD /* libssl.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D123240178E009E0048F785 /* GTRepositoryCommittingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D12323F178E009E0048F785 /* GTRepositoryCommittingSpec.m */; };
 		4D1C40D8182C006D00BE2960 /* GTBlobSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C40D7182C006D00BE2960 /* GTBlobSpec.m */; };
 		4D79C0EE17DF9F4D00997DE4 /* GTCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D79C0EC17DF9F4D00997DE4 /* GTCredential.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -347,6 +353,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		37C6141A2625361C007C04AD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37C614132625361C007C04AD /* libssh2.xcframework in Embed Frameworks */,
+				37C614152625361C007C04AD /* libgit2.xcframework in Embed Frameworks */,
+				37C614192625361C007C04AD /* libssl.xcframework in Embed Frameworks */,
+				37C614172625361C007C04AD /* libcrypto.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79262F0F13C697BE00A4B1EA /* Copy git2 Headers */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +429,10 @@
 		3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZipArchive.xcframework; path = Carthage/Build/ZipArchive.xcframework; sourceTree = "<group>"; };
 		3747FA0126251C4800B2FCA2 /* Quick.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Quick.xcframework; path = Carthage/Build/Quick.xcframework; sourceTree = "<group>"; };
 		3747FA0226251C4800B2FCA2 /* Nimble.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Nimble.xcframework; path = Carthage/Build/Nimble.xcframework; sourceTree = "<group>"; };
+		37C6140E2625361C007C04AD /* libssh2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libssh2.xcframework; path = XCFrameworks/libssh2.xcframework; sourceTree = "<group>"; };
+		37C6140F2625361C007C04AD /* libgit2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libgit2.xcframework; path = XCFrameworks/libgit2.xcframework; sourceTree = "<group>"; };
+		37C614102625361C007C04AD /* libcrypto.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libcrypto.xcframework; path = XCFrameworks/libcrypto.xcframework; sourceTree = "<group>"; };
+		37C614112625361C007C04AD /* libssl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libssl.xcframework; path = XCFrameworks/libssl.xcframework; sourceTree = "<group>"; };
 		4D12323F178E009E0048F785 /* GTRepositoryCommittingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRepositoryCommittingSpec.m; sourceTree = "<group>"; };
 		4D1C40D7182C006D00BE2960 /* GTBlobSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBlobSpec.m; sourceTree = "<group>"; };
 		4D79C0EC17DF9F4D00997DE4 /* GTCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCredential.h; sourceTree = "<group>"; };
@@ -609,7 +633,6 @@
 				F8D6385D207AC75100D1FD32 /* libz.tbd in Frameworks */,
 				F8D6385C207AC74A00D1FD32 /* libiconv.tbd in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
-				3747FA3326251EA100B2FCA2 /* libgit2 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,9 +640,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3747FA3D26251EF800B2FCA2 /* libgit2 in Frameworks */,
+				37C614122625361C007C04AD /* libssh2.xcframework in Frameworks */,
 				F8D63861207ACAF700D1FD32 /* libiconv.tbd in Frameworks */,
+				37C614182625361C007C04AD /* libssl.xcframework in Frameworks */,
 				F8D6385F207ACAE600D1FD32 /* libz.tbd in Frameworks */,
+				37C614162625361C007C04AD /* libcrypto.xcframework in Frameworks */,
+				37C614142625361C007C04AD /* libgit2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,6 +773,10 @@
 		3747F9F526251C2900B2FCA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37C614102625361C007C04AD /* libcrypto.xcframework */,
+				37C6140F2625361C007C04AD /* libgit2.xcframework */,
+				37C6140E2625361C007C04AD /* libssh2.xcframework */,
+				37C614112625361C007C04AD /* libssl.xcframework */,
 				3747FA0226251C4800B2FCA2 /* Nimble.xcframework */,
 				3747FA0126251C4800B2FCA2 /* Quick.xcframework */,
 				3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */,
@@ -1166,7 +1196,6 @@
 			);
 			name = "ObjectiveGit-Mac";
 			packageProductDependencies = (
-				3747FA3226251EA100B2FCA2 /* libgit2 */,
 			);
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = ObjectiveGitFramework;
@@ -1180,6 +1209,7 @@
 				D01B6ECE19F82E2000D411BC /* Sources */,
 				D01B6ECF19F82E2000D411BC /* Frameworks */,
 				D01B6ED019F82E2000D411BC /* Headers */,
+				37C6141A2625361C007C04AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1187,7 +1217,6 @@
 			);
 			name = "ObjectiveGit-iOS";
 			packageProductDependencies = (
-				3747FA3C26251EF800B2FCA2 /* libgit2 */,
 			);
 			productName = ObjectiveGit;
 			productReference = D01B6ED319F82E2000D411BC /* ObjectiveGit.framework */;
@@ -1251,7 +1280,6 @@
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* ObjectiveGitFramework */;
 			packageReferences = (
-				3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */,
 			);
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -2283,30 +2311,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mfcollins3/libgit2-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3747FA3226251EA100B2FCA2 /* libgit2 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */;
-			productName = libgit2;
-		};
-		3747FA3C26251EF800B2FCA2 /* libgit2 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */;
-			productName = libgit2;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
 }
