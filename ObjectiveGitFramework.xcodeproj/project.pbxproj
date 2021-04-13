@@ -3,57 +3,8 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
-
-/* Begin PBXAggregateTarget section */
-		6A28265217C69CB400C6A948 /* OpenSSL-iOS */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 6A28265417C69CB400C6A948 /* Build configuration list for PBXAggregateTarget "OpenSSL-iOS" */;
-			buildPhases = (
-				6A28265317C69CB400C6A948 /* OpenSSL-iOS */,
-			);
-			dependencies = (
-			);
-			name = "OpenSSL-iOS";
-			productName = "OpenSSL-iOS";
-		};
-		6A3C609017D5963700382DFF /* libssh2-iOS */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 6A3C609217D5963700382DFF /* Build configuration list for PBXAggregateTarget "libssh2-iOS" */;
-			buildPhases = (
-				6A3C609117D5963700382DFF /* libssh2-iOS */,
-			);
-			dependencies = (
-				6A3C609D17D5964E00382DFF /* PBXTargetDependency */,
-			);
-			name = "libssh2-iOS";
-			productName = "libssh2-iOS";
-		};
-		D0A330ED16027F1E00A616FA /* libgit2 */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = D0A330EE16027F1E00A616FA /* Build configuration list for PBXAggregateTarget "libgit2" */;
-			buildPhases = (
-				D0A330F116027F2300A616FA /* libgit2 */,
-			);
-			dependencies = (
-			);
-			name = libgit2;
-			productName = libgit2;
-		};
-		D0A330F216027F3600A616FA /* libgit2-iOS */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = D0A330F316027F3700A616FA /* Build configuration list for PBXAggregateTarget "libgit2-iOS" */;
-			buildPhases = (
-				D0A330F616027F3B00A616FA /* libgit2-iOS */,
-			);
-			dependencies = (
-				6A3C609F17D5965700382DFF /* PBXTargetDependency */,
-			);
-			name = "libgit2-iOS";
-			productName = "libgit2-iOS";
-		};
-/* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		200578C518932A82001C06C3 /* GTBlameSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 200578C418932A82001C06C3 /* GTBlameSpec.m */; };
@@ -87,18 +38,23 @@
 		30DCBA7317B4791A009B0EBD /* NSArray+StringArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DCBA7017B4791A009B0EBD /* NSArray+StringArray.m */; };
 		30FDC07F16835A8100654BF0 /* GTDiffLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FDC07D16835A8100654BF0 /* GTDiffLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30FDC08116835A8100654BF0 /* GTDiffLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FDC07E16835A8100654BF0 /* GTDiffLine.m */; };
+		3747FA0326251C4800B2FCA2 /* ZipArchive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */; };
+		3747FA0426251C4800B2FCA2 /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0126251C4800B2FCA2 /* Quick.xcframework */; };
+		3747FA0526251C4800B2FCA2 /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0226251C4800B2FCA2 /* Nimble.xcframework */; };
+		3747FA1626251C7100B2FCA2 /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0226251C4800B2FCA2 /* Nimble.xcframework */; };
+		3747FA1726251C7100B2FCA2 /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0126251C4800B2FCA2 /* Quick.xcframework */; };
+		3747FA1826251C7100B2FCA2 /* ZipArchive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */; };
+		3747FA3326251EA100B2FCA2 /* libgit2 in Frameworks */ = {isa = PBXBuildFile; productRef = 3747FA3226251EA100B2FCA2 /* libgit2 */; };
+		3747FA3D26251EF800B2FCA2 /* libgit2 in Frameworks */ = {isa = PBXBuildFile; productRef = 3747FA3C26251EF800B2FCA2 /* libgit2 */; };
 		4D123240178E009E0048F785 /* GTRepositoryCommittingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D12323F178E009E0048F785 /* GTRepositoryCommittingSpec.m */; };
 		4D1C40D8182C006D00BE2960 /* GTBlobSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C40D7182C006D00BE2960 /* GTBlobSpec.m */; };
 		4D79C0EE17DF9F4D00997DE4 /* GTCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D79C0EC17DF9F4D00997DE4 /* GTCredential.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D79C0EF17DF9F4D00997DE4 /* GTCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D79C0ED17DF9F4D00997DE4 /* GTCredential.m */; };
-		4D9BCD24206D84AD003CD3CE /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9BCD23206D84AD003CD3CE /* libgit2.a */; };
-		4D9BCD25206D84B2003CD3CE /* libgit2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9BCD23206D84AD003CD3CE /* libgit2.a */; };
 		4DBA4A3217DA73CE006CD5F5 /* GTRemoteSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA4A3117DA73CE006CD5F5 /* GTRemoteSpec.m */; };
 		4DC55AE51AD859AD0032563C /* GTCheckoutOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC55AE31AD859AD0032563C /* GTCheckoutOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DC55AE61AD859AD0032563C /* GTCheckoutOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC55AE31AD859AD0032563C /* GTCheckoutOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DC55AE71AD859AD0032563C /* GTCheckoutOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC55AE41AD859AD0032563C /* GTCheckoutOptions.m */; };
 		4DC55AE81AD859AD0032563C /* GTCheckoutOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC55AE41AD859AD0032563C /* GTCheckoutOptions.m */; };
-		4DFA918F207D0B87003CD3CE /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D63865207ACCAA00D1FD32 /* Nimble.framework */; };
 		4DFFB15B183AA8D600D1565E /* GTRepository+RemoteOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DFFB159183AA8D600D1565E /* GTRepository+RemoteOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DFFB15C183AA8D600D1565E /* GTRepository+RemoteOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFB15A183AA8D600D1565E /* GTRepository+RemoteOperations.m */; };
 		55C8055013861FE7004DCB0F /* GTObjectDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8054D13861F34004DCB0F /* GTObjectDatabase.m */; };
@@ -298,16 +254,11 @@
 		D03B7C411756AB370034A610 /* GTSubmoduleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D03B7C401756AB370034A610 /* GTSubmoduleSpec.m */; };
 		D040AF70177B9779001AD9EB /* GTOIDSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D040AF6F177B9779001AD9EB /* GTOIDSpec.m */; };
 		D040AF78177B9A9E001AD9EB /* GTSignatureSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D040AF77177B9A9E001AD9EB /* GTSignatureSpec.m */; };
-		D05FC5E219FAD039008C9348 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1F2FD317C6A8F3003DFADE /* libcrypto.a */; };
-		D05FC5E319FAD03C008C9348 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1F2FD417C6A8F3003DFADE /* libssl.a */; };
-		D05FC5E419FAD040008C9348 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A502B8617D6892D00BAF4A5 /* libssh2.a */; };
 		D06D9E011755D10000558C17 /* GTEnumeratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D06D9E001755D10000558C17 /* GTEnumeratorSpec.m */; };
 		D0751CD918BE520400134314 /* GTFilterListSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0751CD818BE520400134314 /* GTFilterListSpec.m */; };
 		D09C2E361755F16200065E36 /* GTSubmodule.h in Headers */ = {isa = PBXBuildFile; fileRef = D09C2E341755F16200065E36 /* GTSubmodule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09C2E381755F16200065E36 /* GTSubmodule.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C2E351755F16200065E36 /* GTSubmodule.m */; };
 		D09C2E51175602A500065E36 /* fixtures.zip in Resources */ = {isa = PBXBuildFile; fileRef = D09C2E50175602A500065E36 /* fixtures.zip */; };
-		D0A0128A19F98475007F1914 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A0128819F98475007F1914 /* Quick.framework */; };
-		D0A0128C19F9853D007F1914 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A0128B19F9853D007F1914 /* Nimble.framework */; };
 		D0A0129519F99EF8007F1914 /* NSDate+GTTimeAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30B1E7EC1703522100D0814D /* NSDate+GTTimeAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0A0129719F9A660007F1914 /* SwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A0129619F9A660007F1914 /* SwiftSpec.swift */; };
 		D0AC906C172F941F00347DC4 /* GTRepositorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AC906B172F941F00347DC4 /* GTRepositorySpec.m */; };
@@ -369,9 +320,6 @@
 		F8D6385D207AC75100D1FD32 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BB67BB1C7DF45300A37A66 /* libz.tbd */; };
 		F8D6385F207ACAE600D1FD32 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6385E207ACAE600D1FD32 /* libz.tbd */; };
 		F8D63861207ACAF700D1FD32 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D63860207ACAF600D1FD32 /* libiconv.tbd */; };
-		F8D63868207ACCEE00D1FD32 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D63867207ACCEE00D1FD32 /* Quick.framework */; };
-		F8D6386A207ACDDD00D1FD32 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D63869207ACDDD00D1FD32 /* ZipArchive.framework */; };
-		F8D6386C207ACE0600D1FD32 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6386B207ACE0600D1FD32 /* ZipArchive.framework */; };
 		F8E4A2911A170CA6006485A8 /* GTRemotePushSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A2901A170CA6006485A8 /* GTRemotePushSpec.m */; };
 		F8EFA03A1B4059ED000FF7D0 /* GTUtilityFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EFA0391B4059ED000FF7D0 /* GTUtilityFunctions.m */; };
 		F964D5F11CE9D9B200F1D8DD /* GTNote.h in Headers */ = {isa = PBXBuildFile; fileRef = F964D5EF1CE9D9B200F1D8DD /* GTNote.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -382,40 +330,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D6123BD1A6432F6008F831A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0A330ED16027F1E00A616FA;
-			remoteInfo = libgit2;
-		};
-		6A3C609C17D5964E00382DFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6A28265217C69CB400C6A948;
-			remoteInfo = "OpenSSL-iOS";
-		};
-		6A3C609E17D5965700382DFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6A3C609017D5963700382DFF;
-			remoteInfo = "libssh2-iOS";
-		};
 		88F05A9F16011F9000B7AD1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = ObjectiveGit;
-		};
-		D019779619F8335100F523DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0A330F216027F3600A616FA;
-			remoteInfo = "libgit2-iOS";
 		};
 		F879D83D1B4B7F7D002D5C07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -485,6 +405,10 @@
 		30DCBA7017B4791A009B0EBD /* NSArray+StringArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+StringArray.m"; sourceTree = "<group>"; };
 		30FDC07D16835A8100654BF0 /* GTDiffLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiffLine.h; sourceTree = "<group>"; };
 		30FDC07E16835A8100654BF0 /* GTDiffLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiffLine.m; sourceTree = "<group>"; };
+		3747F9F626251C2900B2FCA2 /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = "<group>"; };
+		3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZipArchive.xcframework; path = Carthage/Build/ZipArchive.xcframework; sourceTree = "<group>"; };
+		3747FA0126251C4800B2FCA2 /* Quick.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Quick.xcframework; path = Carthage/Build/Quick.xcframework; sourceTree = "<group>"; };
+		3747FA0226251C4800B2FCA2 /* Nimble.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Nimble.xcframework; path = Carthage/Build/Nimble.xcframework; sourceTree = "<group>"; };
 		4D12323F178E009E0048F785 /* GTRepositoryCommittingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRepositoryCommittingSpec.m; sourceTree = "<group>"; };
 		4D1C40D7182C006D00BE2960 /* GTBlobSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBlobSpec.m; sourceTree = "<group>"; };
 		4D79C0EC17DF9F4D00997DE4 /* GTCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCredential.h; sourceTree = "<group>"; };
@@ -670,11 +594,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3747FA0326251C4800B2FCA2 /* ZipArchive.xcframework in Frameworks */,
+				3747FA0426251C4800B2FCA2 /* Quick.xcframework in Frameworks */,
+				3747FA0526251C4800B2FCA2 /* Nimble.xcframework in Frameworks */,
 				F81B6B50207B032800AB0836 /* XCTest.framework in Frameworks */,
-				D0A0128A19F98475007F1914 /* Quick.framework in Frameworks */,
 				88F05A9E16011F6E00B7AD1D /* ObjectiveGit.framework in Frameworks */,
-				D0A0128C19F9853D007F1914 /* Nimble.framework in Frameworks */,
-				F8D6386C207ACE0600D1FD32 /* ZipArchive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,8 +608,8 @@
 			files = (
 				F8D6385D207AC75100D1FD32 /* libz.tbd in Frameworks */,
 				F8D6385C207AC74A00D1FD32 /* libiconv.tbd in Frameworks */,
-				4D9BCD24206D84AD003CD3CE /* libgit2.a in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				3747FA3326251EA100B2FCA2 /* libgit2 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,12 +617,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3747FA3D26251EF800B2FCA2 /* libgit2 in Frameworks */,
 				F8D63861207ACAF700D1FD32 /* libiconv.tbd in Frameworks */,
 				F8D6385F207ACAE600D1FD32 /* libz.tbd in Frameworks */,
-				D05FC5E319FAD03C008C9348 /* libssl.a in Frameworks */,
-				D05FC5E219FAD039008C9348 /* libcrypto.a in Frameworks */,
-				D05FC5E419FAD040008C9348 /* libssh2.a in Frameworks */,
-				4D9BCD25206D84B2003CD3CE /* libgit2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,11 +627,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3747FA1626251C7100B2FCA2 /* Nimble.xcframework in Frameworks */,
+				3747FA1726251C7100B2FCA2 /* Quick.xcframework in Frameworks */,
+				3747FA1826251C7100B2FCA2 /* ZipArchive.xcframework in Frameworks */,
 				F84277BE207B104A008AB8E8 /* XCTest.framework in Frameworks */,
-				F8D63868207ACCEE00D1FD32 /* Quick.framework in Frameworks */,
 				F879D83C1B4B7F7D002D5C07 /* ObjectiveGit.framework in Frameworks */,
-				4DFA918F207D0B87003CD3CE /* Nimble.framework in Frameworks */,
-				F8D6386A207ACDDD00D1FD32 /* ZipArchive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +662,7 @@
 				D0D81857174421EB00995A2E /* Configuration */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				F8D6384A207A618D00D1FD32 /* script */,
+				3747F9F526251C2900B2FCA2 /* Frameworks */,
 			);
 			name = ObjectiveGitFramework;
 			sourceTree = "<group>";
@@ -820,6 +742,17 @@
 				79262F8A13C69B1600A4B1EA /* git2.h */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		3747F9F526251C2900B2FCA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3747FA0226251C4800B2FCA2 /* Nimble.xcframework */,
+				3747FA0126251C4800B2FCA2 /* Quick.xcframework */,
+				3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */,
+				3747F9F626251C2900B2FCA2 /* OpenSSL.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		88F05A7516011E5400B7AD1D /* ObjectiveGitTests */ = {
@@ -1230,9 +1163,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				3D6123BE1A6432F6008F831A /* PBXTargetDependency */,
 			);
 			name = "ObjectiveGit-Mac";
+			packageProductDependencies = (
+				3747FA3226251EA100B2FCA2 /* libgit2 */,
+			);
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = ObjectiveGitFramework;
 			productReference = 8DC2EF5B0486A6940098B216 /* ObjectiveGit.framework */;
@@ -1249,9 +1184,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				D019779719F8335100F523DA /* PBXTargetDependency */,
 			);
 			name = "ObjectiveGit-iOS";
+			packageProductDependencies = (
+				3747FA3C26251EF800B2FCA2 /* libgit2 */,
+			);
 			productName = ObjectiveGit;
 			productReference = D01B6ED319F82E2000D411BC /* ObjectiveGit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1313,6 +1250,9 @@
 				Base,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* ObjectiveGitFramework */;
+			packageReferences = (
+				3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */,
+			);
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1321,10 +1261,6 @@
 				88F05A6A16011E5400B7AD1D /* ObjectiveGit-MacTests */,
 				D01B6ED219F82E2000D411BC /* ObjectiveGit-iOS */,
 				F879D8351B4B7F7C002D5C07 /* ObjectiveGit-iOSTests */,
-				D0A330ED16027F1E00A616FA /* libgit2 */,
-				D0A330F216027F3600A616FA /* libgit2-iOS */,
-				6A28265217C69CB400C6A948 /* OpenSSL-iOS */,
-				6A3C609017D5963700382DFF /* libssh2-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1370,62 +1306,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./script/repackage-dylibs.rb";
-		};
-		6A28265317C69CB400C6A948 /* OpenSSL-iOS */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "OpenSSL-iOS";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = script/update_libssl_ios;
-		};
-		6A3C609117D5963700382DFF /* libssh2-iOS */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "libssh2-iOS";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = script/update_libssh2_ios;
-		};
-		D0A330F116027F2300A616FA /* libgit2 */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = libgit2;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = script/update_libgit2;
-		};
-		D0A330F616027F3B00A616FA /* libgit2-iOS */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "libgit2-iOS";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = script/update_libgit2_ios;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1648,30 +1528,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3D6123BE1A6432F6008F831A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D0A330ED16027F1E00A616FA /* libgit2 */;
-			targetProxy = 3D6123BD1A6432F6008F831A /* PBXContainerItemProxy */;
-		};
-		6A3C609D17D5964E00382DFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6A28265217C69CB400C6A948 /* OpenSSL-iOS */;
-			targetProxy = 6A3C609C17D5964E00382DFF /* PBXContainerItemProxy */;
-		};
-		6A3C609F17D5965700382DFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6A3C609017D5963700382DFF /* libssh2-iOS */;
-			targetProxy = 6A3C609E17D5965700382DFF /* PBXContainerItemProxy */;
-		};
 		88F05AA016011F9000B7AD1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DC2EF4F0486A6940098B216 /* ObjectiveGit-Mac */;
 			targetProxy = 88F05A9F16011F9000B7AD1D /* PBXContainerItemProxy */;
-		};
-		D019779719F8335100F523DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D0A330F216027F3600A616FA /* libgit2-iOS */;
-			targetProxy = D019779619F8335100F523DA /* PBXContainerItemProxy */;
 		};
 		F879D83E1B4B7F7D002D5C07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1829,54 +1689,6 @@
 				);
 			};
 			name = Release;
-		};
-		6A28265517C69CB400C6A948 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "OpenSSL-iOS";
-			};
-			name = Debug;
-		};
-		6A28265617C69CB400C6A948 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "OpenSSL-iOS";
-			};
-			name = Release;
-		};
-		6A28265717C69CB400C6A948 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "OpenSSL-iOS";
-			};
-			name = Profile;
-		};
-		6A3C609317D5963700382DFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "libssh2-iOS";
-			};
-			name = Debug;
-		};
-		6A3C609417D5963700382DFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "libssh2-iOS";
-			};
-			name = Release;
-		};
-		6A3C609517D5963700382DFF /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "libssh2-iOS";
-			};
-			name = Profile;
 		};
 		88F05A8016011E5400B7AD1D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2037,38 +1849,6 @@
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/External/libgit2/include";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Test;
-		};
-		D019779219F830F500F523DA /* Test */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D8186B174421EB00995A2E /* Mac-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Test;
-		};
-		D019779319F830F500F523DA /* Test */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Test;
-		};
-		D019779419F830F500F523DA /* Test */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "OpenSSL-iOS";
-			};
-			name = Test;
-		};
-		D019779519F830F500F523DA /* Test */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "libssh2-iOS";
 			};
 			name = Test;
 		};
@@ -2239,54 +2019,6 @@
 			};
 			name = Profile;
 		};
-		D03FC3DB1602E97F00BCFA73 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D8186B174421EB00995A2E /* Mac-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Profile;
-		};
-		D03FC3DC1602E97F00BCFA73 /* Profile */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Profile;
-		};
-		D0A330EF16027F1E00A616FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D8186B174421EB00995A2E /* Mac-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D0A330F016027F1E00A616FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D8186B174421EB00995A2E /* Mac-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		D0A330F416027F3700A616FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		D0A330F516027F3700A616FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D81865174421EB00995A2E /* iOS-StaticLibrary.xcconfig */;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		F879D8401B4B7F7D002D5C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0A463DB17E57C45000F5021 /* Test.xcconfig */;
@@ -2327,7 +2059,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					.,
 					External,
@@ -2371,7 +2107,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					.,
 					External,
@@ -2416,7 +2156,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					.,
 					External,
@@ -2425,7 +2169,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libgit2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2462,7 +2207,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					.,
 					External,
@@ -2500,28 +2249,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A28265417C69CB400C6A948 /* Build configuration list for PBXAggregateTarget "OpenSSL-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6A28265517C69CB400C6A948 /* Debug */,
-				D019779419F830F500F523DA /* Test */,
-				6A28265617C69CB400C6A948 /* Release */,
-				6A28265717C69CB400C6A948 /* Profile */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6A3C609217D5963700382DFF /* Build configuration list for PBXAggregateTarget "libssh2-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6A3C609317D5963700382DFF /* Debug */,
-				D019779519F830F500F523DA /* Test */,
-				6A3C609417D5963700382DFF /* Release */,
-				6A3C609517D5963700382DFF /* Profile */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		88F05A7F16011E5400B7AD1D /* Build configuration list for PBXNativeTarget "ObjectiveGit-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2544,28 +2271,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0A330EE16027F1E00A616FA /* Build configuration list for PBXAggregateTarget "libgit2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0A330EF16027F1E00A616FA /* Debug */,
-				D019779219F830F500F523DA /* Test */,
-				D0A330F016027F1E00A616FA /* Release */,
-				D03FC3DB1602E97F00BCFA73 /* Profile */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D0A330F316027F3700A616FA /* Build configuration list for PBXAggregateTarget "libgit2-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0A330F416027F3700A616FA /* Debug */,
-				D019779319F830F500F523DA /* Test */,
-				D0A330F516027F3700A616FA /* Release */,
-				D03FC3DC1602E97F00BCFA73 /* Profile */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F879D83F1B4B7F7D002D5C07 /* Build configuration list for PBXNativeTarget "ObjectiveGit-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2578,6 +2283,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mfcollins3/libgit2-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3747FA3226251EA100B2FCA2 /* libgit2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */;
+			productName = libgit2;
+		};
+		3747FA3C26251EF800B2FCA2 /* libgit2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3747FA3126251EA100B2FCA2 /* XCRemoteSwiftPackageReference "libgit2-ios" */;
+			productName = libgit2;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
 }
