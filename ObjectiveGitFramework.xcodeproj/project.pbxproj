@@ -96,7 +96,6 @@
 		88746CC417FA1C950005888A /* GTRepository+Committing.h in Headers */ = {isa = PBXBuildFile; fileRef = 88746CC217FA1C950005888A /* GTRepository+Committing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88746CC617FA1C950005888A /* GTRepository+Committing.m in Sources */ = {isa = PBXBuildFile; fileRef = 88746CC317FA1C950005888A /* GTRepository+Committing.m */; };
 		88948AC91779243600809CDA /* GTObjectDatabaseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 88948AC81779243600809CDA /* GTObjectDatabaseSpec.m */; };
-		889923FB19FF5DD40092A9A6 /* git2 in Headers */ = {isa = PBXBuildFile; fileRef = 889923F919FF5DD40092A9A6 /* git2 */; settings = {ATTRIBUTES = (Public, ); }; };
 		88A994BA16FCE7D400402C7B /* GTBranchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A994B916FCE7D400402C7B /* GTBranchSpec.m */; };
 		88A994CB16FCED1D00402C7B /* QuickSpec+GTFixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A994CA16FCED1D00402C7B /* QuickSpec+GTFixtures.m */; };
 		88B2131C1B20E785005CF2C5 /* GTRepository+References.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B2131A1B20E785005CF2C5 /* GTRepository+References.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -155,7 +154,6 @@
 		D015F7CC17F695E800AD5E1F /* GTRepository+Stashing.m in Sources */ = {isa = PBXBuildFile; fileRef = D015F7C917F695E800AD5E1F /* GTRepository+Stashing.m */; };
 		D015F7D517F6965400AD5E1F /* GTRepositoryStashingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D015F7D417F6965400AD5E1F /* GTRepositoryStashingSpec.m */; };
 		D019778A19F8307600F523DA /* ObjectiveGit.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F05AC51601209A00B7AD1D /* ObjectiveGit.m */; };
-		D01B6F1419F82F6000D411BC /* git2.h in Headers */ = {isa = PBXBuildFile; fileRef = 79262F8A13C69B1600A4B1EA /* git2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D01B6F1519F82F7B00D411BC /* NSData+Git.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6C2266131459E700992935 /* NSData+Git.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D01B6F1619F82F7B00D411BC /* NSData+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6C2267131459E700992935 /* NSData+Git.m */; };
 		D01B6F1719F82F7B00D411BC /* NSError+Git.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE4C060130EFE2C00851650 /* NSError+Git.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -425,7 +423,6 @@
 		30DCBA7017B4791A009B0EBD /* NSArray+StringArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+StringArray.m"; sourceTree = "<group>"; };
 		30FDC07D16835A8100654BF0 /* GTDiffLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDiffLine.h; sourceTree = "<group>"; };
 		30FDC07E16835A8100654BF0 /* GTDiffLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDiffLine.m; sourceTree = "<group>"; };
-		3747F9F626251C2900B2FCA2 /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = "<group>"; };
 		3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ZipArchive.xcframework; path = Carthage/Build/ZipArchive.xcframework; sourceTree = "<group>"; };
 		3747FA0126251C4800B2FCA2 /* Quick.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Quick.xcframework; path = Carthage/Build/Quick.xcframework; sourceTree = "<group>"; };
 		3747FA0226251C4800B2FCA2 /* Nimble.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Nimble.xcframework; path = Carthage/Build/Nimble.xcframework; sourceTree = "<group>"; };
@@ -780,7 +777,6 @@
 				3747FA0226251C4800B2FCA2 /* Nimble.xcframework */,
 				3747FA0126251C4800B2FCA2 /* Quick.xcframework */,
 				3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */,
-				3747F9F626251C2900B2FCA2 /* OpenSSL.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1151,9 +1147,7 @@
 				D01B6F1B19F82F7B00D411BC /* NSDate+GTTimeAdditions.h in Headers */,
 				F964D5F21CE9D9B200F1D8DD /* GTNote.h in Headers */,
 				D01B6F6319F82FA600D411BC /* GTFilterList.h in Headers */,
-				889923FB19FF5DD40092A9A6 /* git2 in Headers */,
 				F8D1BDEF1B31FE7C00CDEC90 /* GTRepository+Pull.h in Headers */,
-				D01B6F1419F82F6000D411BC /* git2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1655,15 +1649,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
-				HEADER_SEARCH_PATHS = (
-					External/libgit2/include,
-					/usr/local/include,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LIBRARY_SEARCH_PATHS = (
-					.,
-					External,
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -1695,15 +1681,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
-				HEADER_SEARCH_PATHS = (
-					External/libgit2/include,
-					/usr/local/include,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LIBRARY_SEARCH_PATHS = (
-					.,
-					External,
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -1781,15 +1759,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
-				HEADER_SEARCH_PATHS = (
-					External/libgit2/include,
-					/usr/local/include,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LIBRARY_SEARCH_PATHS = (
-					.,
-					External,
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -1974,15 +1944,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
-				HEADER_SEARCH_PATHS = (
-					External/libgit2/include,
-					/usr/local/include,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LIBRARY_SEARCH_PATHS = (
-					.,
-					External,
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CFLAGS = (
 					"$(inherited)",
