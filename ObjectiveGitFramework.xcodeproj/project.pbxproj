@@ -44,6 +44,8 @@
 		3747FA1626251C7100B2FCA2 /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0226251C4800B2FCA2 /* Nimble.xcframework */; };
 		3747FA1726251C7100B2FCA2 /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0126251C4800B2FCA2 /* Quick.xcframework */; };
 		3747FA1826251C7100B2FCA2 /* ZipArchive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3747FA0026251C4800B2FCA2 /* ZipArchive.xcframework */; };
+		3756A24A262B2F0500CCDBCD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BB67BB1C7DF45300A37A66 /* libz.tbd */; };
+		3756A24E262B2F2E00CCDBCD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6385B207AC74A00D1FD32 /* libiconv.tbd */; };
 		37C614122625361C007C04AD /* libssh2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C6140E2625361C007C04AD /* libssh2.xcframework */; };
 		37C614132625361C007C04AD /* libssh2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37C6140E2625361C007C04AD /* libssh2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37C614142625361C007C04AD /* libgit2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C6140F2625361C007C04AD /* libgit2.xcframework */; };
@@ -322,8 +324,6 @@
 		F8D1BDF11B31FE7C00CDEC90 /* GTRepository+Pull.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D1BDED1B31FE7C00CDEC90 /* GTRepository+Pull.m */; };
 		F8D6385C207AC74A00D1FD32 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6385B207AC74A00D1FD32 /* libiconv.tbd */; };
 		F8D6385D207AC75100D1FD32 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BB67BB1C7DF45300A37A66 /* libz.tbd */; };
-		F8D6385F207ACAE600D1FD32 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6385E207ACAE600D1FD32 /* libz.tbd */; };
-		F8D63861207ACAF700D1FD32 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D63860207ACAF600D1FD32 /* libiconv.tbd */; };
 		F8E4A2911A170CA6006485A8 /* GTRemotePushSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A2901A170CA6006485A8 /* GTRemotePushSpec.m */; };
 		F8EFA03A1B4059ED000FF7D0 /* GTUtilityFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EFA0391B4059ED000FF7D0 /* GTUtilityFunctions.m */; };
 		F964D5F11CE9D9B200F1D8DD /* GTNote.h in Headers */ = {isa = PBXBuildFile; fileRef = F964D5EF1CE9D9B200F1D8DD /* GTNote.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -435,7 +435,6 @@
 		4D79C0EC17DF9F4D00997DE4 /* GTCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCredential.h; sourceTree = "<group>"; };
 		4D79C0ED17DF9F4D00997DE4 /* GTCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCredential.m; sourceTree = "<group>"; };
 		4D79C0F617DFAA7100997DE4 /* GTCredential+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTCredential+Private.h"; sourceTree = "<group>"; };
-		4D9BCD23206D84AD003CD3CE /* libgit2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgit2.a; path = External/build/lib/libgit2.a; sourceTree = "<group>"; };
 		4DBA4A3117DA73CE006CD5F5 /* GTRemoteSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRemoteSpec.m; sourceTree = "<group>"; };
 		4DC55AE31AD859AD0032563C /* GTCheckoutOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCheckoutOptions.h; sourceTree = "<group>"; };
 		4DC55AE41AD859AD0032563C /* GTCheckoutOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCheckoutOptions.m; sourceTree = "<group>"; };
@@ -449,9 +448,6 @@
 		5BE612861745EE3300266D8C /* GTTreeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTTreeBuilder.h; sourceTree = "<group>"; };
 		5BE612871745EE3300266D8C /* GTTreeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTreeBuilder.m; sourceTree = "<group>"; };
 		5BE612921745EEBC00266D8C /* GTTreeBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTTreeBuilderSpec.m; sourceTree = "<group>"; };
-		6A1F2FD317C6A8F3003DFADE /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = External/build/lib/libcrypto.a; sourceTree = "<group>"; };
-		6A1F2FD417C6A8F3003DFADE /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = External/build/lib/libssl.a; sourceTree = "<group>"; };
-		6A502B8617D6892D00BAF4A5 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = External/build/lib/libssh2.a; sourceTree = "<group>"; };
 		6EEB519F199D62B9001D72C0 /* GTFetchHeadEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFetchHeadEntry.h; sourceTree = "<group>"; };
 		6EEB51A0199D62B9001D72C0 /* GTFetchHeadEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFetchHeadEntry.m; sourceTree = "<group>"; };
 		79262F0E13C697BE00A4B1EA /* git2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = git2; path = External/libgit2/include/git2; sourceTree = "<group>"; };
@@ -482,7 +478,6 @@
 		887B948D1A3A38130070D41D /* ObjectiveGit.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = ObjectiveGit.modulemap; sourceTree = "<group>"; };
 		887DAFF615CB1C8000F30D0D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		88948AC81779243600809CDA /* GTObjectDatabaseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTObjectDatabaseSpec.m; sourceTree = "<group>"; };
-		889923F919FF5DD40092A9A6 /* git2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = git2; path = External/libgit2/include/git2; sourceTree = "<group>"; };
 		88A994B916FCE7D400402C7B /* GTBranchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBranchSpec.m; sourceTree = "<group>"; };
 		88A994C916FCED1D00402C7B /* QuickSpec+GTFixtures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QuickSpec+GTFixtures.h"; sourceTree = "<group>"; };
 		88A994CA16FCED1D00402C7B /* QuickSpec+GTFixtures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QuickSpec+GTFixtures.m"; sourceTree = "<group>"; };
@@ -557,8 +552,6 @@
 		D09C2E341755F16200065E36 /* GTSubmodule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSubmodule.h; sourceTree = "<group>"; };
 		D09C2E351755F16200065E36 /* GTSubmodule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSubmodule.m; sourceTree = "<group>"; };
 		D09C2E50175602A500065E36 /* fixtures.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = fixtures.zip; path = fixtures/fixtures.zip; sourceTree = "<group>"; };
-		D0A0128819F98475007F1914 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A0128B19F9853D007F1914 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A0129619F9A660007F1914 /* SwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpec.swift; sourceTree = "<group>"; };
 		D0A463D617E57C45000F5021 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		D0A463D817E57C45000F5021 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -593,12 +586,6 @@
 		F8D1BDED1B31FE7C00CDEC90 /* GTRepository+Pull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTRepository+Pull.m"; sourceTree = "<group>"; };
 		F8D6384A207A618D00D1FD32 /* script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = script; sourceTree = "<group>"; };
 		F8D6385B207AC74A00D1FD32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		F8D6385E207ACAE600D1FD32 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
-		F8D63860207ACAF600D1FD32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/usr/lib/libiconv.tbd; sourceTree = DEVELOPER_DIR; };
-		F8D63865207ACCAA00D1FD32 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = "../Debug-iphonesimulator/Nimble.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D63867207ACCEE00D1FD32 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../Debug-iphonesimulator/Quick.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D63869207ACDDD00D1FD32 /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZipArchive.framework; path = "../Debug-iphonesimulator/ZipArchive.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D6386B207ACE0600D1FD32 /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D63871207AE62A00D1FD32 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F8D63872207AE63A00D1FD32 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F8E4A2901A170CA6006485A8 /* GTRemotePushSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRemotePushSpec.m; sourceTree = "<group>"; };
@@ -637,10 +624,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3756A24E262B2F2E00CCDBCD /* libiconv.tbd in Frameworks */,
+				3756A24A262B2F0500CCDBCD /* libz.tbd in Frameworks */,
 				37C614122625361C007C04AD /* libssh2.xcframework in Frameworks */,
-				F8D63861207ACAF700D1FD32 /* libiconv.tbd in Frameworks */,
 				37C614182625361C007C04AD /* libssl.xcframework in Frameworks */,
-				F8D6385F207ACAE600D1FD32 /* libz.tbd in Frameworks */,
 				37C614162625361C007C04AD /* libcrypto.xcframework in Frameworks */,
 				37C614142625361C007C04AD /* libgit2.xcframework in Frameworks */,
 			);
@@ -695,25 +682,12 @@
 			isa = PBXGroup;
 			children = (
 				306123A817EA5261006591D4 /* extobjc */,
-				889923F919FF5DD40092A9A6 /* git2 */,
-				6A1F2FD317C6A8F3003DFADE /* libcrypto.a */,
-				F8D63860207ACAF600D1FD32 /* libiconv.tbd */,
 				F8D6385B207AC74A00D1FD32 /* libiconv.tbd */,
 				23BB67BB1C7DF45300A37A66 /* libz.tbd */,
-				F8D6385E207ACAE600D1FD32 /* libz.tbd */,
-				6A1F2FD417C6A8F3003DFADE /* libssl.a */,
-				6A502B8617D6892D00BAF4A5 /* libssh2.a */,
-				4D9BCD23206D84AD003CD3CE /* libgit2.a */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
-				D0A0128B19F9853D007F1914 /* Nimble.framework */,
-				F8D63865207ACCAA00D1FD32 /* Nimble.framework */,
-				D0A0128819F98475007F1914 /* Quick.framework */,
-				F8D63867207ACCEE00D1FD32 /* Quick.framework */,
 				887DAFF615CB1C8000F30D0D /* Security.framework */,
 				F8D63871207AE62A00D1FD32 /* XCTest.framework */,
 				F8D63872207AE63A00D1FD32 /* XCTest.framework */,
-				F8D6386B207ACE0600D1FD32 /* ZipArchive.framework */,
-				F8D63869207ACDDD00D1FD32 /* ZipArchive.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
