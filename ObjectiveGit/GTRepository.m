@@ -56,8 +56,12 @@
 #import "GTNote.h"
 
 #import "EXTScope.h"
-
-#import "git2.h"
+#import "git2/deprecated.h"
+#import "git2/branch.h"
+#import "git2/notes.h"
+#import "git2/revparse.h"
+#import "git2/tag.h"
+#import "git2/graph.h"
 
 NSString * const GTRepositoryCloneOptionsBare = @"GTRepositoryCloneOptionsBare";
 NSString * const GTRepositoryCloneOptionsPerformCheckout = @"GTRepositoryCloneOptionsPerformCheckout";

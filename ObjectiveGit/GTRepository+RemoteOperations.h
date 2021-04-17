@@ -8,6 +8,7 @@
 
 #import "GTRepository.h"
 #import "git2/remote.h"
+#import "git2/deprecated.h"
 
 @class GTFetchHeadEntry;
 

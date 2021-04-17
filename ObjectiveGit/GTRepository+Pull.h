@@ -7,7 +7,7 @@
 //
 
 #import "GTRepository.h"
-
+#import "git2/deprecated.h"
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^GTRemoteFetchTransferProgressBlock)(const git_transfer_progress *progress, BOOL *stop);
